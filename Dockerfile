@@ -15,3 +15,6 @@ RUN apk add --no-cache --virtual=pandoc-deps wget ca-certificates && \
 RUN git clone --branch ${STELLAR_CORE_VERSION} --recursive --depth 1 https://github.com/stellar/stellar-core.git
 
 RUN cd stellar-core && ./autogen.sh && ./configure && make && make install
+
+# Cleanup
+RUN rm -rf stellar-core

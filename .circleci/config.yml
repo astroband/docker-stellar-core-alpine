@@ -29,10 +29,10 @@ jobs:
       - run:
           name: Build docker image
           command: |
-            docker build --build-arg STELLAR_CORE_VERSION=${STELLAR_CORE_VERSION} -t $DOCKERHUB_LOGIN/${CIRCLE_PROJECT_REPONAME}:${STELLAR_CORE_VERSION} .
+            docker build --build-arg STELLAR_CORE_VERSION=${STELLAR_CORE_VERSION} -t ${DOCKERHUB_LOGIN}/${CIRCLE_PROJECT_REPONAME}:${STELLAR_CORE_VERSION} .
 
       # deploy the image
       - run:
           name: Push image to DockerHub
           command: |
-            docker push $DOCKERHUB_LOGIN/${CIRCLE_PROJECT_REPONAME}:${STELLAR_CORE_VERSION}
+            docker push ${DOCKERHUB_LOGIN}/${CIRCLE_PROJECT_REPONAME}:${STELLAR_CORE_VERSION}
