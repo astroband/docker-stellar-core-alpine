@@ -1,6 +1,6 @@
 # docker-stellar-core-alpine
 
-Stellar Core image built on Alpine linux.
+Stellar Core image built on Alpine Linux. Just in case you're building your Stellar tool using Alpine as a source too.
 
 To use it as build source for other container do:
 
